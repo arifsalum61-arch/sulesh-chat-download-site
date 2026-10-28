@@ -1,37 +1,302 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#101827">
-<title>SULESH CHAT | Tovuti Rasmi</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#0b1120;color:#fff;font-family:Arial,sans-serif}
-header{padding:22px 7%;border-bottom:1px solid #273449}
-.brand{font-size:24px;font-weight:bold;color:#62e6bd}
-main{max-width:800px;margin:55px auto;padding:24px;text-align:center}
-h1{font-size:clamp(32px,7vw,52px)}
-p{color:#bdc8d8;line-height:1.8}
-.button{display:inline-block;margin:20px 0;padding:16px 26px;background:#62e6bd;color:#07131a;font-weight:bold;text-decoration:none;border-radius:12px}
-.panel{margin-top:25px;padding:20px;border:1px solid #273449;border-radius:18px}
-footer{padding:30px;text-align:center;color:#94a3b8}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08111f">
+
+  <title>SULESH CHAT — Pakua App Rasmi ya Android</title>
+  <meta name="description" content="Karibu SULESH CHAT. Tembelea ukurasa rasmi wa app, angalia picha zake na pakua toleo la Android.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SULESH CHAT — Ungana kwa urahisi">
+  <meta property="og:description" content="Tazama SULESH CHAT na pakua toleo la Android kutoka kwenye ukurasa rasmi.">
+  <meta property="og:image" content="images/sulesh-chat-01.jpg">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #08111f;
+      --panel: #101d30;
+      --text: #f5f8ff;
+      --muted: #b5c3d7;
+      --green: #62e6bd;
+      --border: #26374e;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(ellipse at top, #15314a 0%, var(--bg) 58%);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    header {
+      padding: 18px 6%;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--green);
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    main {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 72px 0 48px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 13px;
+      border: 1px solid #2c665c;
+      border-radius: 999px;
+      color: var(--green);
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 1.1;
+      margin: 20px auto;
+      max-width: 850px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px 6px;
+      padding: 14px 23px;
+      border-radius: 12px;
+      background: var(--green);
+      color: #06131a;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .button.secondary {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    section { padding: 34px 0; }
+
+    h2 {
+      font-size: clamp(25px, 4vw, 36px);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .section-intro {
+      text-align: center;
+      color: var(--muted);
+      margin: 0 auto 28px;
+      max-width: 650px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      padding: 10px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1.5;
+      object-fit: contain;
+      border-radius: 11px;
+      background: #07101c;
+    }
+
+    .gallery figcaption {
+      padding: 10px 4px 3px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature, .download-panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 22px;
+    }
+
+    .feature h3 { margin-top: 0; }
+
+    .feature p, .download-panel p {
+      color: var(--muted);
+    }
+
+    .download-panel {
+      max-width: 720px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 28px 5%;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    footer a { color: var(--green); }
+
+    @media (max-width: 720px) {
+      header { padding: 16px 5%; }
+      nav a { margin-left: 9px; font-size: 12px; }
+      .hero { padding-top: 48px; }
+      .gallery, .features { grid-template-columns: 1fr; }
+      .gallery img { aspect-ratio: 1.5; }
+    }
+  </style>
 </head>
+
 <body>
-<header><div class="brand">SULESH CHAT</div></header>
-<main>
-<h1>Karibu SULESH CHAT</h1>
-<p>Ungana na watu wako kupitia SULESH CHAT.</p>
-<p>Pakua toleo la Android hapa chini.</p>
-<a class="button" href="SULESH-CHAT.apk" download>↓ PAKUA APK</a>
-<div class="panel">
-<h3>Taarifa za toleo</h3>
-<p>Toleo: v1.0.0 — Android test build</p>
-<p>Ukubwa wa APK: takribani MB 2.1</p>
-<p>Hili ni toleo la majaribio. Pakua kutoka kwenye chanzo rasmi pekee.</p>
-</div>
-</main>
-<footer>© 2026 SULESH CHAT</footer>
+  <header>
+    <div class="brand">SULESH CHAT</div>
+    <nav aria-label="Menyu kuu">
+      <a href="#vipengele">Vipengele</a>
+      <a href="#pakua">Pakua</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="tag">UKURASA RASMI WA SULESH CHAT</span>
+      <h1>Ungana na watu wako kupitia SULESH CHAT</h1>
+      <p>
+        Karibu kwenye SULESH CHAT. Tazama picha za app na pakua
+        toleo la Android kutoka kwenye ukurasa huu.
+      </p>
+      <a class="button" href="SULESH-CHAT.apk" download>
+        ↓ PAKUA SULESH CHAT APK
+      </a>
+      <a class="button secondary" href="#picha">Tazama picha</a>
+    </section>
+
+    <section id="picha">
+      <h2>Muonekano wa SULESH CHAT</h2>
+      <p class="section-intro">
+        Picha za SULESH CHAT kutoka kwenye mkusanyiko rasmi wa ukurasa huu.
+      </p>
+
+      <div class="gallery">
+        <figure>
+          <img src="images/sulesh-chat-01.jpg"
+               alt="Picha ya kwanza ya SULESH CHAT"
+               loading="lazy">
+          <figcaption>SULESH CHAT — picha ya 1</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sulesh-chat-02.jpg"
+               alt="Picha ya pili ya SULESH CHAT"
+               loading="lazy">
+          <figcaption>SULESH CHAT — picha ya 2</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/sulesh-chat-03.jpg"
+               alt="Picha ya tatu ya SULESH CHAT"
+               loading="lazy">
+          <figcaption>SULESH CHAT — picha ya 3</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="vipengele">
+      <h2>Gundua SULESH CHAT</h2>
+      <p class="section-intro">
+        App imeundwa kwa ajili ya mawasiliano kupitia simu na vifaa vinavyotumika.
+      </p>
+
+      <div class="features">
+        <article class="feature">
+          <h3>💬 Mazungumzo</h3>
+          <p>Wasiliana na watu kupitia mfumo wa chat wa app.</p>
+        </article>
+
+        <article class="feature">
+          <h3>👥 Mawasiliano</h3>
+          <p>Tumia huduma za mawasiliano zinazopatikana ndani ya app.</p>
+        </article>
+
+        <article class="feature">
+          <h3>📱 Android</h3>
+          <p>Pakua faili la APK na usome taarifa kabla ya kulisakinisha.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pakua">
+      <div class="download-panel">
+        <h2>Pakua SULESH CHAT</h2>
+        <p>
+          Bonyeza kitufe hapa chini kupakua faili la Android APK.
+          Kabla ya kusakinisha, hakikisha unaamini chanzo cha faili.
+        </p>
+        <a class="button" href="SULESH-CHAT.apk" download>
+          ↓ PAKUA APK
+        </a>
+        <p>Faili: SULESH-CHAT.apk</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SULESH CHAT. Haki zote zimehifadhiwa.</p>
+    <p>Ukurasa wa taarifa na upakuaji wa SULESH CHAT.</p>
+  </footer>
 </body>
 </html>
